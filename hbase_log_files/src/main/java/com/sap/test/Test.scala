@@ -1,6 +1,6 @@
 package com.sap.test
 
-import com.sap.i076326.flume_embedded_agent
+import com.sap.i076326.spark_hbase
 
 object Test {
   def main(args: Array[String]) : Unit = {
@@ -27,11 +27,11 @@ object Test {
     result = resultArr(0)
     println(result("personal data:PersonalId"))*/
 
-/*    val spark = new spark_hbase()
+    val spark = new spark_hbase()
       val sc = spark.setUp()
       spark.createTable("emp_spark_client", Array("personal data", "professional data"))
       spark.insertData("emp_spark_client", "r", 8, Array("personal data:PersonalId", "professional data:ProfessionalId"), Array("J6818101","i076326"))
-      println(spark.createRDD(sc))*/
+      println(spark.createRDD(sc))
 
 /*      val logs_type1 = new store_logs_without_messaging()
     val filesList = logs_type1.getFilesList("/home/sbcd90/Documents/programs/catalina_logs")
@@ -42,7 +42,7 @@ object Test {
     result = resultArr(1)
     println(result("fileId:normalId"))*/
 
-    val flume_source = new flume_embedded_agent()
-    flume_source.create_embedded_agent()
+ /*   val flume_source = new flume_embedded_agent()
+    flume_source.create_embedded_agent()*/
   }
 }
