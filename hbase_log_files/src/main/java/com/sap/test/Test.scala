@@ -29,9 +29,9 @@ object Test {
 
     val spark = new spark_hbase()
       val sc = spark.setUp()
-      spark.createTable("emp_spark_client", Array("personal data", "professional data"))
-      spark.insertData("emp_spark_client", "r", 8, Array("personal data:PersonalId", "professional data:ProfessionalId"), Array("J6818101","i076326"))
-      println(spark.createRDD(sc))
+//      spark.createTable("emp_spark_client", Array("personal data", "professional data"))
+//      spark.insertData("emp_spark_client", "r", 8, Array("personal data:PersonalId", "professional data:ProfessionalId"), Array("J6818101","i076326"))
+      println(spark.createRDD(sc, "log_files_store"))
 
 /*      val logs_type1 = new store_logs_without_messaging()
     val filesList = logs_type1.getFilesList("/home/sbcd90/Documents/programs/catalina_logs")

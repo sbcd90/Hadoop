@@ -1,0 +1,531 @@
+Dec 23, 2014 5:11:48 PM org.apache.catalina.startup.Catalina stopServer
+SEVERE: Could not contact localhost:8005. Tomcat may not be running.
+Dec 23, 2014 5:11:48 PM org.apache.catalina.startup.Catalina stopServer
+SEVERE: Catalina.stop: 
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:351)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:213)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:529)
+	at java.net.Socket.connect(Socket.java:478)
+	at java.net.Socket.<init>(Socket.java:375)
+	at java.net.Socket.<init>(Socket.java:189)
+	at org.apache.catalina.startup.Catalina.stopServer(Catalina.java:498)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.stopServer(Bootstrap.java:370)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:457)
+Dec 23, 2014 5:12:43 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/7.0.57
+Dec 23, 2014 5:12:43 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Nov 3 2014 08:39:16 UTC
+Dec 23, 2014 5:12:43 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         7.0.57.0
+Dec 23, 2014 5:12:43 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Windows 8
+Dec 23, 2014 5:12:43 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            6.2
+Dec 23, 2014 5:12:43 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Dec 23, 2014 5:12:43 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JAVA_HOME:             C:\Progra~1\Java\jdk1.6.0_45\jre
+Dec 23, 2014 5:12:43 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.6.0_45-b06
+Dec 23, 2014 5:12:43 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Sun Microsystems Inc.
+Dec 23, 2014 5:12:43 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57
+Dec 23, 2014 5:12:43 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57
+Dec 23, 2014 5:12:43 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.config.file=C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\conf\logging.properties
+Dec 23, 2014 5:12:43 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Dec 23, 2014 5:12:43 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\endorsed
+Dec 23, 2014 5:12:43 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57
+Dec 23, 2014 5:12:43 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57
+Dec 23, 2014 5:12:43 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.io.tmpdir=C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\temp
+Dec 23, 2014 5:12:43 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: Loaded APR based Apache Tomcat Native library 1.1.32 using APR version 1.5.1.
+Dec 23, 2014 5:12:43 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+Dec 23, 2014 5:12:44 PM org.apache.catalina.core.AprLifecycleListener initializeSSL
+INFO: OpenSSL successfully initialized (OpenSSL 1.0.1j 15 Oct 2014)
+Dec 23, 2014 5:12:45 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-apr-8080"]
+Dec 23, 2014 5:12:45 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-apr-8009"]
+Dec 23, 2014 5:12:45 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 3773 ms
+Dec 23, 2014 5:12:45 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Dec 23, 2014 5:12:45 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.57
+Dec 23, 2014 5:12:46 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\docs
+Dec 23, 2014 5:12:46 PM org.apache.tomcat.websocket.server.WsSci onStartup
+INFO: JSR 356 WebSocket (Java WebSocket 1.1) support is not available when running on Java 6. To suppress this message, run Tomcat on Java 7, remove the WebSocket JARs from $CATALINA_HOME/lib or add the WebSocket JARs to the tomcat.util.scan.DefaultJarScanner.jarsToSkip property in $CATALINA_BASE/conf/catalina.properties. Note that the deprecated Tomcat 7 WebSocket API will be available. 
+Dec 23, 2014 5:12:46 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\docs has finished in 849 ms
+Dec 23, 2014 5:12:46 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\examples
+Dec 23, 2014 5:12:50 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\examples has finished in 3,278 ms
+Dec 23, 2014 5:12:50 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\host-manager
+Dec 23, 2014 5:12:50 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\host-manager has finished in 98 ms
+Dec 23, 2014 5:12:50 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\manager
+Dec 23, 2014 5:12:50 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\manager has finished in 83 ms
+Dec 23, 2014 5:12:50 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\ROOT
+Dec 23, 2014 5:12:50 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\ROOT has finished in 66 ms
+Dec 23, 2014 5:12:50 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\ui.m2m.extor
+Dec 23, 2014 5:12:51 PM com.sap.ui5.resource.impl.ServletResourceConfig <init>
+INFO: ResourceServlet configuration for web application: ui.m2m.extor
+  - com.sap.ui5.resource.TEMPLATE_PATH: /templates/listing.html
+  - com.sap.ui5.resource.SERVER_TYPE: Development
+  - com.sap.ui5.resource.PRODUCTIVE_PORTS: []
+  - com.sap.ui5.resource.ACCEPTED_ORIGINS: []
+  - com.sap.ui5.resource.USE_CACHE: false
+  - com.sap.ui5.resource.MAX_AGE: 604800000
+  - com.sap.ui5.resource.USE_SERVER_CACHE: false
+  - com.sap.ui5.resource.REMOTE_LOCATION: n/a
+    - http.proxyHost: n/a
+    - http.proxyPort: n/a
+    - http.nonProxyHosts: n/a
+    - https.proxyHost: n/a
+    - https.proxyPort: n/a
+    - https.nonProxyHosts: n/a
+  - com.sap.ui5.resource.REMOTE_CACHEBUSTER_MAX_AGE: 3600000
+  - com.sap.ui5.resource.PREFER_REMOTE_LOCATION: false
+  - com.sap.ui5.resource.RESOURCE_LOCATOR: null
+  - com.sap.ui5.resource.VERBOSE: true
+Dec 23, 2014 5:12:51 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\ui.m2m.extor has finished in 1,081 ms
+Dec 23, 2014 5:12:51 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-apr-8080"]
+Dec 23, 2014 5:12:51 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-apr-8009"]
+Dec 23, 2014 5:12:51 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 5635 ms
+Dec 23, 2014 5:13:49 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap-ui-core.js" [CLASSPATH]: Service=411ms, Find=203ms, Resource=1ms, Pipe=208ms
+Dec 23, 2014 5:13:49 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/thirdparty/jquery-mobile-custom.js" [CLASSPATH]: Service=141ms, Find=2ms, Resource=1ms, Pipe=138ms
+Dec 23, 2014 5:13:50 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/core/library-preload.json" [CLASSPATH]: Service=160ms, Find=1ms, Resource=1ms, Pipe=159ms
+Dec 23, 2014 5:13:50 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/m/library-preload.json" [CLASSPATH]: Service=147ms, Find=59ms, Resource=0ms, Pipe=88ms
+Dec 23, 2014 5:13:50 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/unified/library-preload.json" [CLASSPATH]: Service=30ms, Find=15ms, Resource=1ms, Pipe=15ms
+Dec 23, 2014 5:13:50 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/vbm/library-preload.json" [CLASSPATH]: Service=55ms, Find=26ms, Resource=1ms, Pipe=29ms
+Dec 23, 2014 5:13:50 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/commons/library-preload.json" [CLASSPATH]: Service=136ms, Find=61ms, Resource=0ms, Pipe=75ms
+Dec 23, 2014 5:13:50 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/layout/library-preload.json" [CLASSPATH]: Service=30ms, Find=14ms, Resource=0ms, Pipe=16ms
+Dec 23, 2014 5:13:50 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/m/themes/sap_bluecrystal/library.css" [CLASSPATH]: Service=124ms, Find=37ms, Resource=1ms, Pipe=86ms
+Dec 23, 2014 5:13:50 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/core/themes/sap_bluecrystal/library.css" [CLASSPATH]: Service=160ms, Find=44ms, Resource=1ms, Pipe=114ms
+Dec 23, 2014 5:13:50 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/unified/themes/sap_bluecrystal/library.css" [CLASSPATH]: Service=63ms, Find=2ms, Resource=1ms, Pipe=61ms
+Dec 23, 2014 5:13:50 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/layout/themes/sap_bluecrystal/library.css" [CLASSPATH]: Service=65ms, Find=3ms, Resource=1ms, Pipe=62ms
+Dec 23, 2014 5:13:50 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/commons/themes/sap_bluecrystal/library.css" [CLASSPATH]: Service=59ms, Find=3ms, Resource=2ms, Pipe=56ms
+Dec 23, 2014 5:13:50 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/vbm/themes/sap_bluecrystal/library.css" [CLASSPATH]: Service=42ms, Find=3ms, Resource=1ms, Pipe=39ms
+Dec 23, 2014 5:13:50 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/unified/messagebundle_en_US.properties" [CLASSPATH]: Service=16ms, Find=2ms, Resource=0ms, Pipe=14ms
+Dec 23, 2014 5:13:51 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/m2m/extor/reuse/util/urlProvider.js" [CLASSPATH]: Service=117ms, Find=117ms, Resource=1ms, Pipe=0ms
+Dec 23, 2014 5:13:51 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/thirdparty/signals.js" [CLASSPATH]: Service=121ms, Find=1ms, Resource=0ms, Pipe=120ms
+Dec 23, 2014 5:13:51 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/thirdparty/hasher.js" [CLASSPATH]: Service=121ms, Find=1ms, Resource=0ms, Pipe=119ms
+Dec 23, 2014 5:13:51 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/thirdparty/crossroads.js" [CLASSPATH]: Service=122ms, Find=1ms, Resource=0ms, Pipe=121ms
+Dec 23, 2014 5:13:51 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/m2m/extor/reuse/core/ReuseMaster.js" [CLASSPATH]: Service=2ms, Find=1ms, Resource=0ms, Pipe=1ms
+Dec 23, 2014 5:13:51 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/m2m/extor/reuse/i18n/texts.hdbtextbundle" [CLASSPATH]: Service=7ms, Find=4ms, Resource=1ms, Pipe=2ms
+Dec 23, 2014 5:13:52 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ca/ui/message/message.js" [CLASSPATH]: Service=441ms, Find=220ms, Resource=1ms, Pipe=221ms
+Dec 23, 2014 5:13:52 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ca/ui/dialog/factory.js" [CLASSPATH]: Service=190ms, Find=1ms, Resource=0ms, Pipe=189ms
+Dec 23, 2014 5:13:52 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ca/ui/dialog/Dialog.js" [CLASSPATH]: Service=187ms, Find=1ms, Resource=0ms, Pipe=186ms
+Dec 23, 2014 5:13:52 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ca/ui/utils/resourcebundle.js" [CLASSPATH]: Service=191ms, Find=2ms, Resource=1ms, Pipe=189ms
+Dec 23, 2014 5:13:53 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ca/ui/i18n/i18n_en_US.properties" [CLASSPATH]: Service=209ms, Find=2ms, Resource=0ms, Pipe=207ms
+Dec 23, 2014 5:13:53 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/layout/messagebundle_en_US.properties" [CLASSPATH]: Service=17ms, Find=2ms, Resource=1ms, Pipe=15ms
+Dec 23, 2014 5:13:53 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/m2m/extor/reuse/views/filters/filter.view.xml" [CLASSPATH]: Service=2ms, Find=2ms, Resource=1ms, Pipe=0ms
+Dec 23, 2014 5:13:53 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/m2m/extor/reuse/views/filters/filter.controller.js" [CLASSPATH]: Service=2ms, Find=1ms, Resource=0ms, Pipe=1ms
+Dec 23, 2014 5:13:53 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/m2m/extor/reuse/util/Helper.js" [CLASSPATH]: Service=2ms, Find=1ms, Resource=0ms, Pipe=0ms
+Dec 23, 2014 5:13:53 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/m2m/extor/reuse/css/filters.css" [CLASSPATH]: Service=2ms, Find=1ms, Resource=0ms, Pipe=0ms
+Dec 23, 2014 5:13:53 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/m2m/extor/reuse/views/filters/filterDialog.fragment.xml" [CLASSPATH]: Service=2ms, Find=1ms, Resource=0ms, Pipe=1ms
+Dec 23, 2014 5:13:53 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/m/messagebundle_en_US.properties" [CLASSPATH]: Service=80ms, Find=1ms, Resource=0ms, Pipe=79ms
+Dec 23, 2014 5:13:53 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/core/themes/sap_bluecrystal/library-parameters.json" [CLASSPATH]: Service=54ms, Find=2ms, Resource=1ms, Pipe=52ms
+Dec 23, 2014 5:13:53 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/m/themes/sap_bluecrystal/library-parameters.json" [CLASSPATH]: Service=39ms, Find=1ms, Resource=0ms, Pipe=38ms
+Dec 23, 2014 5:13:53 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/unified/themes/sap_bluecrystal/library-parameters.json" [CLASSPATH]: Service=39ms, Find=1ms, Resource=0ms, Pipe=38ms
+Dec 23, 2014 5:13:53 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/layout/themes/sap_bluecrystal/library-parameters.json" [CLASSPATH]: Service=38ms, Find=1ms, Resource=0ms, Pipe=37ms
+Dec 23, 2014 5:13:53 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/commons/themes/sap_bluecrystal/library-parameters.json" [CLASSPATH]: Service=39ms, Find=1ms, Resource=0ms, Pipe=38ms
+Dec 23, 2014 5:13:54 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/m2m/extor/reuse/views/map/map.view.xml" [CLASSPATH]: Service=1ms, Find=1ms, Resource=0ms, Pipe=0ms
+Dec 23, 2014 5:13:54 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/m2m/extor/reuse/views/map/map.controller.js" [CLASSPATH]: Service=2ms, Find=1ms, Resource=0ms, Pipe=1ms
+Dec 23, 2014 5:13:54 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ca/ui/model/format/NumberFormat.js" [CLASSPATH]: Service=248ms, Find=1ms, Resource=0ms, Pipe=247ms
+Dec 23, 2014 5:13:54 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ca/ui/model/format/FormatHelper.js" [CLASSPATH]: Service=209ms, Find=2ms, Resource=1ms, Pipe=207ms
+Dec 23, 2014 5:13:54 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/m2m/extor/reuse/views/map/mapResources/mapStyles.css" [CLASSPATH]: Service=3ms, Find=2ms, Resource=0ms, Pipe=1ms
+Dec 23, 2014 5:13:55 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/thirdparty/jqueryui/jquery-ui-widget.js" [CLASSPATH]: Service=124ms, Find=1ms, Resource=0ms, Pipe=122ms
+Dec 23, 2014 5:13:55 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/thirdparty/jqueryui/jquery-ui-mouse.js" [CLASSPATH]: Service=122ms, Find=1ms, Resource=1ms, Pipe=121ms
+Dec 23, 2014 5:13:55 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/thirdparty/jqueryui/jquery-ui-draggable.js" [CLASSPATH]: Service=122ms, Find=2ms, Resource=1ms, Pipe=120ms
+Dec 23, 2014 5:13:55 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/m2m/extor/reuse/views/map/config/MapConfig.json" [CLASSPATH]: Service=2ms, Find=1ms, Resource=0ms, Pipe=0ms
+Dec 23, 2014 5:13:55 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/m2m/extor/reuse/views/kpi/KPITile.view.xml" [CLASSPATH]: Service=2ms, Find=1ms, Resource=0ms, Pipe=1ms
+Dec 23, 2014 5:13:55 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/m2m/extor/reuse/views/kpi/KPITile.controller.js" [CLASSPATH]: Service=2ms, Find=1ms, Resource=0ms, Pipe=0ms
+Dec 23, 2014 5:13:55 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/suite/ui/commons/GenericTile.js" [CLASSPATH]: Service=90ms, Find=41ms, Resource=0ms, Pipe=49ms
+Dec 23, 2014 5:13:55 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/suite/ui/commons/library.js" [CLASSPATH]: Service=49ms, Find=1ms, Resource=0ms, Pipe=46ms
+Dec 23, 2014 5:13:55 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/suite/ui/commons/themes/sap_bluecrystal/library-parameters.json" [CLASSPATH]: Service=65ms, Find=2ms, Resource=0ms, Pipe=63ms
+Dec 23, 2014 5:13:55 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/suite/ui/commons/themes/sap_bluecrystal/library.css" [CLASSPATH]: Service=72ms, Find=2ms, Resource=0ms, Pipe=69ms
+Dec 23, 2014 5:13:55 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/suite/ui/commons/TileContent.js" [CLASSPATH]: Service=47ms, Find=2ms, Resource=0ms, Pipe=44ms
+Dec 23, 2014 5:13:55 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/suite/ui/commons/ComparisonChart.js" [CLASSPATH]: Service=43ms, Find=1ms, Resource=0ms, Pipe=42ms
+Dec 23, 2014 5:13:55 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/suite/ui/commons/ComparisonData.js" [CLASSPATH]: Service=42ms, Find=1ms, Resource=0ms, Pipe=41ms
+Dec 23, 2014 5:13:55 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/suite/ui/commons/messagebundle_en_US.properties" [CLASSPATH]: Service=43ms, Find=2ms, Resource=1ms, Pipe=41ms
+Dec 23, 2014 5:13:55 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/suite/ui/commons/NumericContent.js" [CLASSPATH]: Service=50ms, Find=1ms, Resource=0ms, Pipe=48ms
+Dec 23, 2014 5:13:55 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/suite/ui/commons/BulletChart.js" [CLASSPATH]: Service=42ms, Find=1ms, Resource=0ms, Pipe=40ms
+Dec 23, 2014 5:13:55 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/suite/ui/commons/BulletChartData.js" [CLASSPATH]: Service=42ms, Find=1ms, Resource=0ms, Pipe=40ms
+Dec 23, 2014 5:13:56 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/thirdparty/datajs.js" [CLASSPATH]: Service=123ms, Find=1ms, Resource=0ms, Pipe=122ms
+Dec 23, 2014 5:13:57 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/suite/ui/commons/GenericTileRenderer.js" [CLASSPATH]: Service=42ms, Find=1ms, Resource=0ms, Pipe=41ms
+Dec 23, 2014 5:13:57 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/suite/ui/commons/TileContentRenderer.js" [CLASSPATH]: Service=43ms, Find=1ms, Resource=0ms, Pipe=42ms
+Dec 23, 2014 5:13:57 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/suite/ui/commons/ComparisonChartRenderer.js" [CLASSPATH]: Service=43ms, Find=1ms, Resource=0ms, Pipe=41ms
+Dec 23, 2014 5:13:57 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/suite/ui/commons/NumericContentRenderer.js" [CLASSPATH]: Service=43ms, Find=1ms, Resource=0ms, Pipe=41ms
+Dec 23, 2014 5:13:57 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/suite/ui/commons/BulletChartRenderer.js" [CLASSPATH]: Service=44ms, Find=1ms, Resource=1ms, Pipe=43ms
+Dec 23, 2014 5:13:58 PM com.sap.ui5.resource.ResourceServlet serveResource
+INFO: [200] "/resources/sap/ui/core/themes/base/fonts/SAP-icons.ttf" [CLASSPATH]: Service=178ms, Find=2ms, Resource=0ms, Pipe=176ms
+Dec 23, 2014 5:14:46 PM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Dec 23, 2014 5:14:46 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-apr-8080"]
+Dec 23, 2014 5:14:46 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-apr-8009"]
+Dec 23, 2014 5:14:46 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+Dec 23, 2014 5:14:47 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-apr-8080"]
+Dec 23, 2014 5:14:47 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-apr-8009"]
+Dec 23, 2014 5:14:47 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-apr-8080"]
+Dec 23, 2014 5:14:47 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-apr-8009"]
+Dec 23, 2014 5:37:56 PM org.apache.catalina.startup.Catalina stopServer
+SEVERE: Could not contact localhost:8005. Tomcat may not be running.
+Dec 23, 2014 5:37:56 PM org.apache.catalina.startup.Catalina stopServer
+SEVERE: Catalina.stop: 
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:351)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:213)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:529)
+	at java.net.Socket.connect(Socket.java:478)
+	at java.net.Socket.<init>(Socket.java:375)
+	at java.net.Socket.<init>(Socket.java:189)
+	at org.apache.catalina.startup.Catalina.stopServer(Catalina.java:498)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.stopServer(Bootstrap.java:370)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:457)
+Dec 23, 2014 5:38:22 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/7.0.57
+Dec 23, 2014 5:38:22 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Nov 3 2014 08:39:16 UTC
+Dec 23, 2014 5:38:22 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         7.0.57.0
+Dec 23, 2014 5:38:22 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Windows 8
+Dec 23, 2014 5:38:22 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            6.2
+Dec 23, 2014 5:38:22 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Dec 23, 2014 5:38:22 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JAVA_HOME:             C:\Progra~1\Java\jdk1.6.0_45\jre
+Dec 23, 2014 5:38:22 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.6.0_45-b06
+Dec 23, 2014 5:38:22 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Sun Microsystems Inc.
+Dec 23, 2014 5:38:22 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57
+Dec 23, 2014 5:38:22 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57
+Dec 23, 2014 5:38:22 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.config.file=C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\conf\logging.properties
+Dec 23, 2014 5:38:22 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Dec 23, 2014 5:38:22 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\endorsed
+Dec 23, 2014 5:38:22 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57
+Dec 23, 2014 5:38:22 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57
+Dec 23, 2014 5:38:22 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.io.tmpdir=C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\temp
+Dec 23, 2014 5:38:22 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: Loaded APR based Apache Tomcat Native library 1.1.32 using APR version 1.5.1.
+Dec 23, 2014 5:38:22 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+Dec 23, 2014 5:38:23 PM org.apache.catalina.core.AprLifecycleListener initializeSSL
+INFO: OpenSSL successfully initialized (OpenSSL 1.0.1j 15 Oct 2014)
+Dec 23, 2014 5:38:23 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-apr-8080"]
+Dec 23, 2014 5:38:23 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-apr-8009"]
+Dec 23, 2014 5:38:23 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 1029 ms
+Dec 23, 2014 5:38:23 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Dec 23, 2014 5:38:23 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.57
+Dec 23, 2014 5:38:23 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\docs
+Dec 23, 2014 5:38:24 PM org.apache.tomcat.websocket.server.WsSci onStartup
+INFO: JSR 356 WebSocket (Java WebSocket 1.1) support is not available when running on Java 6. To suppress this message, run Tomcat on Java 7, remove the WebSocket JARs from $CATALINA_HOME/lib or add the WebSocket JARs to the tomcat.util.scan.DefaultJarScanner.jarsToSkip property in $CATALINA_BASE/conf/catalina.properties. Note that the deprecated Tomcat 7 WebSocket API will be available. 
+Dec 23, 2014 5:38:24 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\docs has finished in 1,147 ms
+Dec 23, 2014 5:38:24 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\examples
+Dec 23, 2014 5:38:25 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\examples has finished in 1,149 ms
+Dec 23, 2014 5:38:25 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\host-manager
+Dec 23, 2014 5:38:25 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\host-manager has finished in 67 ms
+Dec 23, 2014 5:38:25 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\manager
+Dec 23, 2014 5:38:25 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\manager has finished in 63 ms
+Dec 23, 2014 5:38:25 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\ROOT
+Dec 23, 2014 5:38:25 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\ROOT has finished in 51 ms
+Dec 23, 2014 5:38:25 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\ui.m2m.extor
+Dec 23, 2014 5:38:27 PM com.sap.ui5.resource.impl.ServletResourceConfig <init>
+INFO: ResourceServlet configuration for web application: ui.m2m.extor
+  - com.sap.ui5.resource.TEMPLATE_PATH: /templates/listing.html
+  - com.sap.ui5.resource.SERVER_TYPE: Development
+  - com.sap.ui5.resource.PRODUCTIVE_PORTS: []
+  - com.sap.ui5.resource.ACCEPTED_ORIGINS: []
+  - com.sap.ui5.resource.USE_CACHE: false
+  - com.sap.ui5.resource.MAX_AGE: 604800000
+  - com.sap.ui5.resource.USE_SERVER_CACHE: false
+  - com.sap.ui5.resource.REMOTE_LOCATION: n/a
+    - http.proxyHost: n/a
+    - http.proxyPort: n/a
+    - http.nonProxyHosts: n/a
+    - https.proxyHost: n/a
+    - https.proxyPort: n/a
+    - https.nonProxyHosts: n/a
+  - com.sap.ui5.resource.REMOTE_CACHEBUSTER_MAX_AGE: 3600000
+  - com.sap.ui5.resource.PREFER_REMOTE_LOCATION: false
+  - com.sap.ui5.resource.RESOURCE_LOCATOR: null
+  - com.sap.ui5.resource.VERBOSE: true
+Dec 23, 2014 5:38:27 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\ui.m2m.extor has finished in 1,142 ms
+Dec 23, 2014 5:38:27 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-apr-8080"]
+Dec 23, 2014 5:38:27 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-apr-8009"]
+Dec 23, 2014 5:38:27 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 3769 ms
+Dec 23, 2014 5:44:51 PM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Dec 23, 2014 5:44:51 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-apr-8080"]
+Dec 23, 2014 5:44:51 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-apr-8009"]
+Dec 23, 2014 5:44:51 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+Dec 23, 2014 5:44:51 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-apr-8080"]
+Dec 23, 2014 5:44:51 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-apr-8009"]
+Dec 23, 2014 5:44:51 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-apr-8080"]
+Dec 23, 2014 5:44:51 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-apr-8009"]
+Dec 23, 2014 5:45:16 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/7.0.57
+Dec 23, 2014 5:45:16 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Nov 3 2014 08:39:16 UTC
+Dec 23, 2014 5:45:16 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         7.0.57.0
+Dec 23, 2014 5:45:16 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Windows 8
+Dec 23, 2014 5:45:16 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            6.2
+Dec 23, 2014 5:45:16 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Dec 23, 2014 5:45:16 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JAVA_HOME:             C:\Progra~1\Java\jdk1.6.0_45\jre
+Dec 23, 2014 5:45:16 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.6.0_45-b06
+Dec 23, 2014 5:45:16 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Sun Microsystems Inc.
+Dec 23, 2014 5:45:16 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57
+Dec 23, 2014 5:45:16 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57
+Dec 23, 2014 5:45:16 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.config.file=C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\conf\logging.properties
+Dec 23, 2014 5:45:16 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Dec 23, 2014 5:45:16 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\endorsed
+Dec 23, 2014 5:45:16 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57
+Dec 23, 2014 5:45:16 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57
+Dec 23, 2014 5:45:16 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.io.tmpdir=C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\temp
+Dec 23, 2014 5:45:16 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: Loaded APR based Apache Tomcat Native library 1.1.32 using APR version 1.5.1.
+Dec 23, 2014 5:45:16 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+Dec 23, 2014 5:45:16 PM org.apache.catalina.core.AprLifecycleListener initializeSSL
+INFO: OpenSSL successfully initialized (OpenSSL 1.0.1j 15 Oct 2014)
+Dec 23, 2014 5:45:16 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-apr-8080"]
+Dec 23, 2014 5:45:16 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-apr-8009"]
+Dec 23, 2014 5:45:16 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 1007 ms
+Dec 23, 2014 5:45:16 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Dec 23, 2014 5:45:16 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.57
+Dec 23, 2014 5:45:16 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\docs
+Dec 23, 2014 5:45:17 PM org.apache.tomcat.websocket.server.WsSci onStartup
+INFO: JSR 356 WebSocket (Java WebSocket 1.1) support is not available when running on Java 6. To suppress this message, run Tomcat on Java 7, remove the WebSocket JARs from $CATALINA_HOME/lib or add the WebSocket JARs to the tomcat.util.scan.DefaultJarScanner.jarsToSkip property in $CATALINA_BASE/conf/catalina.properties. Note that the deprecated Tomcat 7 WebSocket API will be available. 
+Dec 23, 2014 5:45:17 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\docs has finished in 399 ms
+Dec 23, 2014 5:45:17 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\examples
+Dec 23, 2014 5:45:17 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\examples has finished in 447 ms
+Dec 23, 2014 5:45:17 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\host-manager
+Dec 23, 2014 5:45:17 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\host-manager has finished in 62 ms
+Dec 23, 2014 5:45:17 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\manager
+Dec 23, 2014 5:45:17 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\manager has finished in 51 ms
+Dec 23, 2014 5:45:17 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\ROOT
+Dec 23, 2014 5:45:18 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\ROOT has finished in 63 ms
+Dec 23, 2014 5:45:18 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\ui.m2m.extor
+Dec 23, 2014 5:45:19 PM com.sap.ui5.resource.impl.ServletResourceConfig <init>
+INFO: ResourceServlet configuration for web application: ui.m2m.extor
+  - com.sap.ui5.resource.TEMPLATE_PATH: /templates/listing.html
+  - com.sap.ui5.resource.SERVER_TYPE: Development
+  - com.sap.ui5.resource.PRODUCTIVE_PORTS: []
+  - com.sap.ui5.resource.ACCEPTED_ORIGINS: []
+  - com.sap.ui5.resource.USE_CACHE: false
+  - com.sap.ui5.resource.MAX_AGE: 604800000
+  - com.sap.ui5.resource.USE_SERVER_CACHE: false
+  - com.sap.ui5.resource.REMOTE_LOCATION: n/a
+    - http.proxyHost: n/a
+    - http.proxyPort: n/a
+    - http.nonProxyHosts: n/a
+    - https.proxyHost: n/a
+    - https.proxyPort: n/a
+    - https.nonProxyHosts: n/a
+  - com.sap.ui5.resource.REMOTE_CACHEBUSTER_MAX_AGE: 3600000
+  - com.sap.ui5.resource.PREFER_REMOTE_LOCATION: false
+  - com.sap.ui5.resource.RESOURCE_LOCATOR: null
+  - com.sap.ui5.resource.VERBOSE: true
+Dec 23, 2014 5:45:19 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory C:\Users\i076326\Documents\softwares\apache-tomcat-7.0.57\webapps\ui.m2m.extor has finished in 1,467 ms
+Dec 23, 2014 5:45:19 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-apr-8080"]
+Dec 23, 2014 5:45:19 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-apr-8009"]
+Dec 23, 2014 5:45:19 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 2566 ms
+Dec 23, 2014 5:48:25 PM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Dec 23, 2014 5:48:25 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-apr-8080"]
+Dec 23, 2014 5:48:25 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-apr-8009"]
+Dec 23, 2014 5:48:25 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+Dec 23, 2014 5:48:25 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-apr-8080"]
+Dec 23, 2014 5:48:25 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-apr-8009"]
+Dec 23, 2014 5:48:25 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-apr-8080"]
+Dec 23, 2014 5:48:25 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-apr-8009"]
+

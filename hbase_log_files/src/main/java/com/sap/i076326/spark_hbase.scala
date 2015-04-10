@@ -43,8 +43,9 @@ class spark_hbase {
     table.flushCommits()
   }
 
-  def createRDD(sc: SparkContext): Long = {
+  def createRDD(sc: SparkContext, tableName: String): Long = {
     hbase = getHbaseInstance()
+    hbase.getConfiguration().set(TableInputFormat.INPUT_TABLE, tableName);
     val hBaseRDD = sc.newAPIHadoopRDD(hbase.getConfiguration(), classOf[TableInputFormat], classOf[org.apache.hadoop.hbase.io.ImmutableBytesWritable],
       classOf[org.apache.hadoop.hbase.client.Result])
 
