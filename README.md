@@ -5,6 +5,6 @@ Miscellanous prototypes on Hadoop &amp; its eco-system components
 
 -- hbase-log-files
 
-   - writing log files to hbase
-   - create an RDD in Spark using the log file data stored in hbase
-   - flume agent creation for writing data from file system into hbase
+   - put flume on top of HBase to read data from client & write to HBase.
+   - writing log files to hbase.
+   - create an RDD in Spark using the log file data stored in hbase.
