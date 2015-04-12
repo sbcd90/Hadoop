@@ -21,13 +21,14 @@ public class flume_client {
     }
 
     public void callAvroSource() {
+
         this.hostname = "0.0.0.0";
         this.port = 41414;
         this.client = RpcClientFactory.getDefaultInstance(this.hostname, this.port);
 
         String content = "";
         try {
-            content = Files.toString(new File("/home/sbcd90/Documents/programs/catalina_logs/catalina.2014-12-19.log"), Charsets.UTF_8);
+            content = Files.toString(new File("/home/sbcd90/Documents/programs/Hadoop/catalina_logs/catalina.2014-12-19.log"), Charsets.UTF_8);
         }catch(java.io.IOException e){
 
         }
