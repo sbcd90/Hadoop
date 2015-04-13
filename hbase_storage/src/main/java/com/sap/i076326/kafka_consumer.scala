@@ -46,6 +46,8 @@ class kafka_consumer(zookeeper_loc: String, groupId: String, topicName: String) 
         else if(columnVals == null)
           columnVals = Bytes.toString(iterator.next().message()).split(";")
 
+        println(tableName)
+
         if(tableName != null && rowName != null && columns != null && columnVals != null ){
           new hbase().insertData(tableName, rowName, columns, columnVals)
 

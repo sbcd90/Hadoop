@@ -21,7 +21,3 @@ Miscellanous prototypes on Hadoop &amp; its eco-system components
 - hbase_storage
 
    - storing catalina log files using apache kafka & hbase
-
-- kafka-producer
-
-   - a dummy kafka producer-conusmer mechanism

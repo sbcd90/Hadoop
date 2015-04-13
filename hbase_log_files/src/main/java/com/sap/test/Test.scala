@@ -31,7 +31,7 @@ object Test {
       val sc = spark.setUp()
 //      spark.createTable("emp_spark_client", Array("personal data", "professional data"))
 //      spark.insertData("emp_spark_client", "r", 8, Array("personal data:PersonalId", "professional data:ProfessionalId"), Array("J6818101","i076326"))
-      println(spark.createRDD(sc, "log_files_store"))
+      println(spark.createRDD(sc, "hbase_logfiles_store"))
 
 /*      val logs_type1 = new store_logs_without_messaging()
     val filesList = logs_type1.getFilesList("/home/sbcd90/Documents/programs/catalina_logs")

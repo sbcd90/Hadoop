@@ -8,11 +8,21 @@ class client_api {
   var rowName: String = null
   var rowCount: Int = 1
   var columns: String = null
+  var location: String = null
+  var groupName: String = null
 
   var producer: com.sap.i076326.kafka_producer = null
 
   def setTopicName(pTopicName: String): Unit = {
     topicName = pTopicName
+  }
+
+  def setZookeeperLocation(pLocation: String): Unit = {
+    location = pLocation
+  }
+
+  def setConsumerGroup(pGroupName: String): Unit = {
+    groupName = pGroupName
   }
 
   def setTableName(pTableName: String): Unit = {
@@ -48,6 +58,11 @@ class client_api {
 
   def initializeProducer(): Unit = {
     producer = new kafka_producer(1, topicName)
+  }
+
+  def initializeConsumer(): Unit = {
+    val consumer = new kafka_consumer(location, groupName, topicName)
+    consumer.run()
   }
 
   def callKafkaProducer(data: String, row: String): Unit = {
