@@ -6,12 +6,12 @@ object TestClient{
   def main (args: Array[String]) {
     val client = new client_api()
 
-    client.setTopicName("kafkaScala")
+    client.setTopicName("storeFiles")
     client.setZookeeperLocation("localhost:2182")
-    client.setConsumerGroup("group2")
+    client.setConsumerGroup("group4")
 
     client.setTableName("hbase_logfiles_store")
-    client.setRowName("row", 8)
+    client.setRowName("row", 4)
     client.setColumn("fileKey:fileName;fileContent:content")
 
 //    client.initializeConsumer()

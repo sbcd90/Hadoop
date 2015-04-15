@@ -4,7 +4,7 @@ import com.sap.i076326.kafka_consumer
 
 object TestConsumer{
   def main(args: Array[String]): Unit = {
-    val consumer = new kafka_consumer("localhost:2182", "group2", "kafkaScala")
+    val consumer = new kafka_consumer("localhost:2182", "group4", "storeFiles")
     consumer.run()
 
 //    Thread.sleep(60000)

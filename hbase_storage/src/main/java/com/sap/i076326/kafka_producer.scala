@@ -54,7 +54,7 @@ class kafka_producer(var events: Int, topicName: String) {
       }else if(nEvents ==4){
         data = KeyedMessage[String,String](topicName, ip, null, columnVals)
       }
-
+      println(tableName)
       producer.send(data)
     }
   }
