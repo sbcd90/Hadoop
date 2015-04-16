@@ -32,4 +32,4 @@ Miscellanous prototypes on Hadoop &amp; its eco-system components
 
 - spring_xd_hana
 
-   - connecting to hana using standard reader from spring & using custom writer
+   - connecting to hana using standard reader from spring & using custom writer 
