@@ -1,5 +1,9 @@
 package com.sap.i076326;
 
+//check flume-conf.properties under 'resources' for static params used in this custom sink. It resides in $FLUME_HOME/conf
+//./flume-ng agent -n agent1 -f ../conf/flume-conf.properties
+// create flume_client.java.template out of standard java file 'flume_client.java'..put automate_flume_client.sh into bin folder of $FLUME_HOME to automate client
+
 import org.apache.flume.*;
 import org.apache.flume.conf.Configurable;
 import org.apache.flume.sink.AbstractSink;
@@ -14,9 +18,7 @@ public class flume_custom_sink extends AbstractSink implements Configurable{
     private int batchSize;
     private HBaseAdmin hba;
     private Hbase hbase;
-    private int count;
 
-    @Override
     public void configure(Context context) {
         tableName = context.getString("tableName");
         columnDescriptors = context.getString("columnDescriptors");
@@ -30,7 +32,6 @@ public class flume_custom_sink extends AbstractSink implements Configurable{
         try {
             hba = hbase.setupConnection();
             hbase.createTable(hba, tableName, columnDescriptors.split(";"));
-            count = 0;
         }catch (org.apache.hadoop.hbase.MasterNotRunningException e){
 
         }catch (org.apache.hadoop.hbase.ZooKeeperConnectionException e){
@@ -45,14 +46,13 @@ public class flume_custom_sink extends AbstractSink implements Configurable{
         System.out.println("can stop now");
     }
 
-    @Override
     public Status process() throws EventDeliveryException {
         Channel channel = getChannel();
         Transaction tx = null;
 
         tx = channel.getTransaction();
         try {
-            Thread.sleep(60000);
+            Thread.sleep(10000);
         }catch(java.lang.InterruptedException e){
 
         }
@@ -77,7 +77,6 @@ public class flume_custom_sink extends AbstractSink implements Configurable{
         }
         tx.commit();
         tx.close();
-        count++;
 
         return Status.READY;
     }

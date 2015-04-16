@@ -33,7 +33,7 @@ public class flume_client {
 
         }
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("row1;catalina.2014-12-19.log;");
+        stringBuilder.append("row4;catalina.2014-12-19.log;");
         stringBuilder.append(content);
         Event event = EventBuilder.withBody(stringBuilder.toString().getBytes());
         try{
