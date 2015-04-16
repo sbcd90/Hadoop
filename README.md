@@ -25,3 +25,11 @@ Miscellanous prototypes on Hadoop &amp; its eco-system components
 - kafka-producer
 
    - a dummy kafka producer-conusmer mechanism
+
+- spring_xd_batch_jobs
+
+   - creating spring batch jobs with custom reader & writer
+
+- spring_xd_hana
+
+   - connecting to hana using standard reader from spring & using custom writer
