@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Deploying to spring XD, create 'jar' using mvn clean install -->
+<!-- Create a directory named 'simple_example' in /home/sbcd90/Documents/softwares/spring-xd-1.1.1.RELEASE/xd/modules/job -->
+<!-- Create sub directories 'lib' & 'config' under it -->
+<!-- copy & paste the created jar in first step into 'lib' directory -->
+<!-- copy & paste HANA Jdbc driver ngdbc.jar into /home/sbcd90/Documents/softwares/spring-xd-1.1.1.RELEASE/xd/lib -->
+<!-- copy & paste Beans.xml into 'config' directory & rename it to 'simple_example.xml' -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:batch="http://www.springframework.org/schema/batch"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch.xsd">
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.sap.db.jdbc.Driver"></property>
+        <property name="url" value="jdbc:sap://ld9840.wdf.sap.corp:30015/"></property>
+        <property name="username" value="I076326"></property>
+        <property name="password" value="Algo..addict965431"></property>
+    </bean>
+
+    <bean id="recordReader" class="org.springframework.batch.item.database.JdbcCursorItemReader" scope="step">
+        <property name="dataSource" ref="dataSource"></property>
+        <property name="sql" value="SELECT * FROM I076326.VOCB"></property>
+        <property name="rowMapper">
+            <bean class="com.sap.i076326.RecordRowMapper"></bean>
+        </property>
+    </bean>
+
+    <bean id="recordWriter" class="com.sap.i076326.RecordWriter"></bean>
+
+    <batch:job id="job">
+        <batch:step id="step1">
+            <batch:tasklet>
+                <batch:chunk reader="recordReader" writer="recordWriter" commit-interval="1">
+                </batch:chunk>
+            </batch:tasklet>
+        </batch:step>
+    </batch:job>
+</beans>
