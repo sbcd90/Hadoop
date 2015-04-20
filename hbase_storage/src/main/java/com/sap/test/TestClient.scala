@@ -11,7 +11,7 @@ object TestClient{
     client.setConsumerGroup("group4")
 
     client.setTableName("hbase_logfiles_store")
-    client.setRowName("row", 4)
+    client.setRowName("row", 8)
     client.setColumn("fileKey:fileName;fileContent:content")
 
 //    client.initializeConsumer()

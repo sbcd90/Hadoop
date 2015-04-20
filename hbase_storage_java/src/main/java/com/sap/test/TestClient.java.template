@@ -1,0 +1,20 @@
+package com.sap.test;
+
+import com.sap.i076326.client_api;
+
+public class TestClient {
+    public static void main(String[] args) {
+        client_api client = new client_api();
+
+        client.setTopicName("storeFiles");
+
+        client.setTableName("hbase_logfiles_store");
+        client.setRowName("row", 0);
+        client.setColumns("fileKey:fileName;fileContent:content");
+
+        client.initializeProducer();
+        client.fetchFiles("/home/sbcd90/Documents/programs/Hadoop/catalina_logs");
+        client.closeProducer();
+    }
+}
+//end of file
