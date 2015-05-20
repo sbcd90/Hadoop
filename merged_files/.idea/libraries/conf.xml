@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="conf">
+    <ANNOTATIONS>
+      <root url="file:///usr/local/hadoop/hadoop-2.6.0/conf" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file:///usr/local/hadoop/hadoop-2.6.0/conf" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file:///usr/local/hadoop/hadoop-2.6.0/conf" />
+    </JAVADOC>
+    <NATIVE>
+      <root url="file:///usr/local/hadoop/hadoop-2.6.0/conf" />
+    </NATIVE>
+    <SOURCES>
+      <root url="file:///usr/local/hadoop/hadoop-2.6.0/conf" />
+    </SOURCES>
+    <jarDirectory url="file:///usr/local/hadoop/hadoop-2.6.0/conf" recursive="false" />
+    <jarDirectory url="file:///usr/local/hadoop/hadoop-2.6.0/conf" recursive="false" type="SOURCES" />
+  </library>
+</component>
