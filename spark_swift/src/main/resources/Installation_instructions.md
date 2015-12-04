@@ -38,6 +38,9 @@ Installation Instructions
 3. Build Spark with the following command
         build/mvn -Pyarn -Phadoop-2.6 -Dhadoop.version=2.6.0 -DskipTests clean package
 
+
+- Add a file called core-site.xml to $SPARK_HOME/conf. A sample core-site.xml can be found in project's src/main/resources folder.
+
 - Run the application
 
 1. Get the jar hadoop-openstack-2.6.0.jar from .m2 & put it in $SPARK_HOME/bin folder
