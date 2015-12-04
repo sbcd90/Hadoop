@@ -1,1 +1,11 @@
 target/
+.settings
+.project
+.classpath
+*.iml
+.idea
+raml/
+generate.bat
+raml-to-jax-rs.jar
+/thing-api/
+node_modules/
