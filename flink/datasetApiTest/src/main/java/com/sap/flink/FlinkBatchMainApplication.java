@@ -27,5 +27,40 @@ public class FlinkBatchMainApplication {
          * mapPartition transformation test
          */
         transformationTest.testMapPartition();
+
+        /**
+         * filter transformation test
+         */
+        transformationTest.testFilter();
+
+        /**
+         * reduce transformation test
+         */
+        transformationTest.testReduce();
+
+        /**
+         * reduce group test
+         */
+        transformationTest.testReduceGroup();
+
+        /**
+         * aggregate transformation test
+         */
+        transformationTest.testAggregate();
+
+        /**
+         * join transformation test
+         */
+        transformationTest.testJoin();
+
+        /**
+         * cross transformation test
+         */
+        transformationTest.testCross();
+
+        /**
+         * union transformation test
+         */
+        transformationTest.testUnion();
     }
 }
