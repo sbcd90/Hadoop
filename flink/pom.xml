@@ -12,5 +12,6 @@
 
     <modules>
         <module>datasetApiTest</module>
+        <module>datastreamApiTest</module>
     </modules>
 </project>
