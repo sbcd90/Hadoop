@@ -42,3 +42,7 @@ Miscellanous prototypes on Hadoop &amp; its eco-system components
 
    - flink batch processing poc with transformations
    - flink streaming poc
+
+- mapreduce
+
+   - simple mapreduce wordcount example
