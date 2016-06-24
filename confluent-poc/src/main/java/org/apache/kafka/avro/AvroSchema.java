@@ -1,5 +1,7 @@
 package org.apache.kafka.avro;
 
+import org.apache.avro.Schema;
+import org.apache.avro.SchemaBuilder;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.node.ArrayNode;
 import org.codehaus.jackson.node.ObjectNode;
@@ -68,5 +70,15 @@ public class AvroSchema {
     schema = avroSchemaNode.toString();
 
     return mapper.createObjectNode().putAll(objectNode).toString();
+  }
+
+  public static Schema getSchema() {
+    return SchemaBuilder.builder()
+      .record("confluent_kafka")
+      .namespace("org.apache.avro")
+      .fields()
+      .name("key").type().intType().noDefault()
+      .name("value").type().stringType().noDefault()
+      .endRecord();
   }
 }

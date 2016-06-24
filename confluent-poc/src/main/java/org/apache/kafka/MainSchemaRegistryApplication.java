@@ -1,14 +1,14 @@
 package org.apache.kafka;
 
 import org.apache.kafka.avro.AvroSchema;
-import org.apache.kafka.schema.SchemaRegistryClient;
+import org.apache.kafka.schema.SchemaRegistryRestClient;
 import org.apache.kafka.schema.SerializationOption;
 
 public class MainSchemaRegistryApplication {
   private static final String topic = "confluent_poc";
 
   public static void main(String[] args) {
-    SchemaRegistryClient client = new SchemaRegistryClient();
+    SchemaRegistryRestClient client = new SchemaRegistryRestClient();
 
     // check schema registries
     client.getSchemaRegistries();

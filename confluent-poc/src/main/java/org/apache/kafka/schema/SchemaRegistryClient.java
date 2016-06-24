@@ -1,101 +1,54 @@
 package org.apache.kafka.schema;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import javax.ws.rs.client.*;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
-import java.io.IOException;
-import java.util.List;
+import io.confluent.kafka.schemaregistry.client.CachedSchemaRegistryClient;
+import io.confluent.kafka.schemaregistry.client.SchemaMetadata;
+import org.apache.avro.Schema;
 
 public class SchemaRegistryClient {
   private static final String schemaRegistryUrl = "http://10.9.43.125:8081";
-  private final Client client = ClientBuilder.newClient();
 
-  public final String KEY_SERIALIZATION_FLAG = "key";
-  public final String VALUE_SERIALIZATION_FLAG = "value";
+  private final String KEY_SERIALIZATION_FLAG = "key";
+  private final String VALUE_SERIALIZATION_FLAG = "value";
 
-  public List<String> getSchemaRegistries() {
-    String resource = "/subjects";
+  private final io.confluent.kafka.schemaregistry.client.SchemaRegistryClient schemaRegistryClient;
 
-    WebTarget target = client.target(schemaRegistryUrl + resource);
-    Invocation.Builder builder = target.request(MediaType.APPLICATION_JSON_TYPE);
-
-    Response response = builder.get();
-    if (response.getStatus() == 200) {
-      System.out.println(response.readEntity(String.class));
-    }
-    return null;
+  // identityMapCapacity - no. of schemas per topic.
+  public SchemaRegistryClient(int identityMapCapacity) {
+    schemaRegistryClient = new CachedSchemaRegistryClient(schemaRegistryUrl, identityMapCapacity);
   }
 
-  public String getSchemaRegistry(String topic, SerializationOption flag) throws IOException {
-    String resource = "/subjects/";
+  public boolean doSchemaRegistry(String topic, SerializationOption flag, Schema schema) throws Exception {
+    String subject = null;
     if (flag == SerializationOption.KEY) {
-      resource += topic + "-" + KEY_SERIALIZATION_FLAG + "/versions/latest";
+      subject = topic + "-" + KEY_SERIALIZATION_FLAG;
     } else {
-      resource += topic + "-" + VALUE_SERIALIZATION_FLAG + "/versions/latest";
+      subject = topic + "-" + VALUE_SERIALIZATION_FLAG;
     }
-
-    WebTarget target = client.target(schemaRegistryUrl + resource);
-    Invocation.Builder builder = target.request(MediaType.APPLICATION_JSON_TYPE);
-
-    Response response = builder.get();
-    if (response.getStatus() == 200) {
-      ObjectMapper mapper = new ObjectMapper();
-      String responseJson = mapper.readTree(response.readEntity(String.class)).get("schema").asText();
-      return responseJson;
-    } else {
-      throw new RuntimeException("Schema not registered");
-    }
+    schemaRegistryClient.register(subject, schema);
+    return true;
   }
 
-  private boolean postSchemaRegistry(String topic, SerializationOption flag, String avroSchema) {
-    String resource = "/subjects/";
+  public String getSchema(String topic, SerializationOption flag) throws Exception {
+    String subject = null;
     if (flag == SerializationOption.KEY) {
-      resource += topic + "-" + KEY_SERIALIZATION_FLAG + "/versions";
-    }  else {
-      resource += topic + "-" + VALUE_SERIALIZATION_FLAG + "/versions";
-    }
-
-    WebTarget target = client.target(schemaRegistryUrl + resource);
-    Invocation.Builder builder = target.request(MediaType.APPLICATION_JSON_TYPE);
-
-    Response response = builder.post(Entity.entity(avroSchema, MediaType.APPLICATION_JSON_TYPE));
-    if (response.getStatus() == 200) {
-      System.out.println(response.readEntity(String.class));
-      return true;
+      subject = topic + "-" + KEY_SERIALIZATION_FLAG;
     } else {
-      throw new RuntimeException(response.readEntity(String.class));
+      subject = topic + "-" + VALUE_SERIALIZATION_FLAG;
     }
+    SchemaMetadata metadata = schemaRegistryClient.getLatestSchemaMetadata(subject);
+    return metadata.getSchema();
   }
 
-  private boolean checkSchemaExistence(String topic, SerializationOption flag, String avroSchema) {
-    String resource = "/subjects/";
-    if (flag == SerializationOption.KEY) {
-      resource += topic + "-" + KEY_SERIALIZATION_FLAG;
-    } else {
-      resource += topic + "-" + VALUE_SERIALIZATION_FLAG;
-    }
-
-    WebTarget target = client.target(schemaRegistryUrl + resource);
-    Invocation.Builder builder = target.request(MediaType.APPLICATION_JSON_TYPE);
-
-    Response response = builder.post(Entity.entity(avroSchema, MediaType.APPLICATION_JSON_TYPE));
-    if (response.getStatus() == 200) {
-      System.out.println(response.readEntity(String.class));
-      return true;
-    } else if (response.getStatus() == 404) {
-      System.out.println("Schema not found");
-      return false;
-    } else {
-      throw new RuntimeException(response.readEntity(String.class));
-    }
-  }
-
-  public void doSchemaRegistry(String topic, SerializationOption flag, String avroSchema) {
-    if (!checkSchemaExistence(topic, flag, avroSchema)) {
-      postSchemaRegistry(topic, flag, avroSchema);
+  public String getOrCreateSchemaRegistry(String topic, SerializationOption flag, Schema... schema) {
+    try {
+      return getSchema(topic, flag);
+    } catch (Exception e) {
+      try {
+        doSchemaRegistry(topic, flag, schema[0]);
+        return getSchema(topic, flag);
+      } catch (Exception e1) {
+        throw new RuntimeException(e1);
+      }
     }
   }
 }
