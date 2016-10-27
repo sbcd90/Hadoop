@@ -38,21 +38,6 @@ public class CEPMonitoring {
       .assignTimestampsAndWatermarks(new IngestionTimeExtractor<MonitoringEvent>());
 
     Pattern<MonitoringEvent, ?> warningPattern = Pattern.<MonitoringEvent>begin("first")
-//      .subtype(TemperatureEvent.class)
-/*      .where(new FilterFunction<TemperatureEvent>() {
-        public boolean filter(TemperatureEvent temperatureEvent) throws Exception {
-          if (temperatureEvent.getTemp() >= TEMPERATURE_THRESHOLD) {
-            return true;
-          }
-          return false;
-        }
-      }) */
-      .where(new FilterFunction<MonitoringEvent>() {
-        public boolean filter(MonitoringEvent monitoringEvent) throws Exception {
-          return false;
-        }
-      })
-/*      .next("second")
       .subtype(TemperatureEvent.class)
       .where(new FilterFunction<TemperatureEvent>() {
         public boolean filter(TemperatureEvent temperatureEvent) throws Exception {
@@ -61,7 +46,17 @@ public class CEPMonitoring {
           }
           return false;
         }
-      }) */
+      })
+      .next("second")
+      .subtype(TemperatureEvent.class)
+      .where(new FilterFunction<TemperatureEvent>() {
+        public boolean filter(TemperatureEvent temperatureEvent) throws Exception {
+          if (temperatureEvent.getTemp() >= TEMPERATURE_THRESHOLD) {
+            return true;
+          }
+          return false;
+        }
+      })
       .within(Time.seconds(10));
 
     PatternStream<MonitoringEvent> tempPatternStream = CEP.pattern(
@@ -72,15 +67,15 @@ public class CEPMonitoring {
     DataStream<TemperatureWarning> warnings = tempPatternStream.select(new PatternSelectFunction<MonitoringEvent, TemperatureWarning>() {
       public TemperatureWarning select(Map<String, MonitoringEvent> map) throws Exception {
         TemperatureEvent first = (TemperatureEvent) map.get("first");
-        TemperatureEvent second = (TemperatureEvent) map.get("first");
-//        TemperatureEvent second = (TemperatureEvent) map.get("second");
+//        TemperatureEvent second = (TemperatureEvent) map.get("first");
+        TemperatureEvent second = (TemperatureEvent) map.get("second");
 
         System.out.println("Key: " + first.getId() + " Value: " + ((first.getTemp() + second.getTemp()) / 2));
         return new TemperatureWarning(first.getId(), (first.getTemp() + second.getTemp()) / 2);
       }
     });
 
-//    warnings.print();
+    warnings.print();
 
     env.execute("CEP Monitoring job");
   }
